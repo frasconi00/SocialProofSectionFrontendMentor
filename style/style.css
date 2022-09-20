@@ -1,0 +1,212 @@
+:root {
+   /*primary*/
+   --Very-Dark-Magenta: hsl(300, 43%, 22%);
+   --Soft-Pink: hsl(333, 80%, 67%);
+   /*neutral*/
+   --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+   --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+   --White: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+html {
+   font-size: 15px;
+   font-family: 'League Spartan', sans-serif;
+}
+
+   body {
+      min-height: 100vh;
+      background-image: url("bg-pattern-top-desktop.svg"), url("bg-pattern-bottom-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: left top, right bottom;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   
+   section {
+      display: flex;
+      flex-direction: row;
+   }
+   
+   .intro {
+      width: 35rem;
+      padding-right: 10vw;
+   }
+   
+   .intro > h1 {
+      color: var(--Very-Dark-Magenta);
+      font-size: xxx-large;
+   }
+   
+   .intro > h2 {
+      color: var(--Very-Dark-Magenta);
+      font-size: medium;
+      font-weight: 400;
+      padding-top: 1.5rem;
+      line-height: 1.5;
+   }
+   
+   .ratingComponent {
+      display: flex;
+      background-color: var(--Light-Grayish-Magenta);
+      padding: 0.75rem 2rem;
+      margin: 1.5rem auto;
+      border-radius: 0.5rem;
+      min-width: max-content;
+      align-items: center;
+   }
+   
+   .ratingComponent:nth-of-type(1) {
+      margin-right: 6rem;
+   }
+   
+   .ratingComponent:nth-of-type(2) {
+      margin-left: 3rem;
+      margin-right: 3rem;
+   }
+   
+   .ratingComponent:nth-of-type(3) {
+      margin-left: 6rem;
+   }
+   
+   .starsContainer {
+      background-image: url("icon-star.svg");
+      background-repeat: space;
+      width: 5.9rem;
+      height: 1.5rem;
+      margin-right: 2rem;
+      background-size: 1rem;
+      background-position-y: center;
+   }
+   
+   .ratingComponent h3 {
+      font-size: 1rem;
+      color: var(--Very-Dark-Magenta);
+   }
+   
+   article {
+      display: flex;
+      flex-direction: row;
+      padding-top: 5rem;
+   }
+   
+   .reviewComponent {
+      width: 21.5rem;
+      padding: 2rem;
+      background-color: var(--Very-Dark-Magenta);
+      border-radius: 0.5rem;
+   }
+   
+   .reviewHeading {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+   }
+   
+   .reviewHeading > img {
+      width: 2.4rem;
+      border-radius: 50%;
+   }
+   
+   .reviewTitle {
+      padding-left: 1.4rem;
+   }
+   
+   .reviewTitle > h4 {
+      color: var(--White);
+      font-weight: 500;
+      opacity: 0.95;
+   }
+   
+   .reviewTitle > h5 {
+      color: var(--Soft-Pink);
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.03rem;
+      opacity: 0.95;
+      padding-top: 0.255rem;
+   }
+   
+   .reviewComponent > p {
+      color: var(--White);
+      line-height: 1.4;
+      padding-top: 1.5rem;
+   }
+   
+   .reviewComponent:nth-of-type(1) {
+      margin-bottom: 2.4rem;
+   }
+   
+   .reviewComponent:nth-of-type(2) {
+      margin: 1.2rem 2rem;
+   }
+   
+   .reviewComponent:nth-of-type(3) {
+      margin-top: 2.4rem;
+   }
+
+@media screen and (max-width: 1030px) {
+   body {
+      background-image: url("bg-pattern-top-mobile.svg"), url("bg-pattern-bottom-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: top, bottom;
+      background-size: contain;
+   }
+
+   main {
+      width: 95vw;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+   }
+   
+   section {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .intro  {
+      width: 100%;
+      padding: 0;
+   }
+
+   .intro > h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      padding: 0 1rem;
+   }
+
+   .intro > h2 {
+      text-align: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+   }
+   
+   article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 1.3rem;
+   }
+
+   div.ratingComponent:nth-of-type(1), div.ratingComponent:nth-of-type(2), div.ratingComponent:nth-of-type(3) {
+      margin: 1.1rem 1rem;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   div.starsContainer {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+   }
+
+   div.reviewComponent:nth-of-type(1), div.reviewComponent:nth-of-type(2), div.reviewComponent:nth-of-type(3) {
+      margin: 0.6rem 1rem;
+   }
+}
